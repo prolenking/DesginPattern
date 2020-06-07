@@ -8,17 +8,17 @@ package singleton;
  *
  * @author lizhi
  */
-public class CodeFactory {
+public class Singleton01 {
 
-    private static final CodeFactory INSTANCE = new CodeFactory();
+    private static final Singleton01 INSTANCE = new Singleton01();
     
     static {
         //doSth...
     }
 
-    private CodeFactory(){}
+    private Singleton01(){}
 
-    public static CodeFactory getInstance() {
+    public static Singleton01 getInstance() {
         return INSTANCE;
     }
 }
