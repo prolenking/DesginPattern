@@ -3,6 +3,10 @@ package singleton;
 /**
  * Create with IntelliJ IDEA
  * <p>
+ * 优秀到了极致的写法
+ * 完美达到了所有目标
+ * 甚至实现了防反射
+ * <p>
  * User: liz
  * Date: 2020/6/9
  * Time: 4:11 下午
