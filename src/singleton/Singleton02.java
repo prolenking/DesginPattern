@@ -13,18 +13,14 @@ package singleton;
  * @time: 3:19 上午
  */
 public class Singleton02 {
-    private static Singleton02 INSTANCE = new Singleton02();
-
-    static {
-        //doSth...
-    }
+    private static Singleton02 INSTANCE;
 
     private Singleton02(){}
 
     public static Singleton02 getInstance() {
+        // 几个线程开始时都取不到INSTANCE所以都会走到代码块里去
         if (INSTANCE ==null){
             {
-
                 //doSth....
                 try {
                     Thread.sleep(10);
@@ -32,6 +28,7 @@ public class Singleton02 {
                     e.printStackTrace();
                 }
             }
+            // 每个走进来的线程都不管不顾new了一个实例
             INSTANCE = new Singleton02();
         }
         return INSTANCE;
